@@ -1,0 +1,41 @@
+https://pad.riseup.net/p/megahack-01
+
+Solange Gueiros
+
+Crie seu primeiro frontend para smartcontracts
+https://solange.dev/2020/2020-04-18-Rsk-FirstFrontendWeb3injected/
+https://www.youtube.com/watch?v=RVXB2NgGODU
+
+Pré requisito
+https://solange.dev/2020/2020-03-27-Rsk-RemixMetamask/
+https://www.youtube.com/watch?v=TTTUcgGO-Ko
+
+Contatos
+https://solange.dev/
+solange@iovlabs.org
+solangegueiros@gmail.com
+https://medium.com/@solangegueiros
+https://www.linkedin.com/in/solangegueiros/
+https://www.youtube.com/user/solangegueiros
+twitter, facebook, instagram: solangegueiros
+
+https://developers.rsk.co/webinars/
+
+
+https://metamask.io/download.html
+race beauty dizzy salon knee capital pistol attract venue napkin lion gossip
+
+https://faucet.rsk.co/
+
+https://explorer.testnet.rsk.co/tx/0xfcec48682a41330a8d46e09f83530a883088efbfe0de1d2275df4e23c05169cc
+
+https://raw.githubusercontent.com/solangegueiros/dapp-register-rsk/master/register-rsk-web3-injected/register.sol
+
+https://explorer.testnet.rsk.co/tx/0x03b71d34b9dbc9a8be88845d2f46a809ba3531f367bdb6a3a7f6882b8e00de01
+
+https://explorer.testnet.rsk.co/address/0x7a49562ffd82936fa57c703bf02449d2ed26e80a
+
+
+
+
+
