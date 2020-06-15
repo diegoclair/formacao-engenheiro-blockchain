@@ -1,0 +1,27 @@
+{
+  "name": "supplychainapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.4",
+    "express": "^4.16.4",
+    "fs": "0.0.1-security",
+    "ganache-cli": "^6.2.4",
+    "node-gyp": "^3.8.0",
+    "path": "^0.12.7",
+    "python": "0.0.4",
+    "solc": "^0.4.25",
+    "truffle": "^5.0.0",
+    "truffle-hdwallet-provider": "^1.0.13"
+  }
+}

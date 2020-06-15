@@ -1,0 +1,43 @@
+namespace org.example.empty
+
+asset Consignment identified by consigId {
+	o String consigId
+	o String drugName
+	o String useCase
+	o Double quantity
+    o Double price 
+}
+
+asset ifSold identified by consigID {
+  o String consigID
+  o Boolean soldOrNot
+  --> Retailer buyer optional
+  
+}
+
+participant Distributor identified by distributorId {
+	o String distributorId
+	o String name
+	o String address
+}
+
+participant Retailer identified by retailerId {
+	o String retailerId
+	o String name
+	o String address
+}
+
+participant InventoryClerk identified by clerkId {
+	o String clerkId
+	o String name
+}
+
+participant Auditor identified by auditorId {
+	o String auditorId
+	o String name
+}
+
+transaction Sell {
+	--> Retailer buyer
+    --> ifSold status
+}

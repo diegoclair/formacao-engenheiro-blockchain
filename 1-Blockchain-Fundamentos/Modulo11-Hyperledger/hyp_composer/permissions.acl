@@ -1,0 +1,134 @@
+rule EverybodySeesNetwork {
+  description: "All participants can see the network"
+  participant: "org.example.empty.**"
+  operation: READ
+  resource: "org.hyperledger.composer.system.**"
+  action: ALLOW
+}
+
+rule AuditorsSeeStatus {
+  description: "Auditors can see inventory"
+  participant: "org.example.empty.Auditor"
+  operation: READ
+  resource: "org.example.empty.**"
+  action: ALLOW
+}
+
+rule DistributorsSell1 {
+  description: "Distributors can sell drugs"
+  participant: "org.example.empty.Distributor"
+  operation: CREATE
+  resource: "org.hyperledger.composer.system.HistorianRecord"
+  action: ALLOW
+}
+
+rule DistributorsSell2 {
+  description: "Distributors can sell drugs"
+  participant: "org.example.empty.Distributor"
+  operation: READ,UPDATE
+  resource: "org.example.empty.ifSold"
+  action: ALLOW
+}
+
+rule DistributorsSell3 {
+  description: "Distributors can sell drugs"
+  participant: "org.example.empty.Distributor"
+  operation: READ
+  resource: "org.example.empty.Consignment"
+  action: ALLOW
+}
+rule DistributorsSell4 {
+  description: "Distributors can sell drugs"
+  participant: "org.example.empty.Distributor"
+  operation: READ
+  resource: "org.example.empty.Retailer"
+  action: ALLOW
+}
+rule DistributorsSell5 {
+  description: "Distributors can sell drugs"
+  participant: "org.example.empty.Distributor"
+  operation: ALL
+  resource: "org.example.empty.Sell"
+  action: ALLOW
+}
+rule StockClerkUpdatesInventory1 {
+  description: "Stock clerks can manage the inventory"
+  participant: "org.example.empty.InventoryClerk"
+  operation: ALL
+  resource: "org.example.empty.Consignment"
+  action: ALLOW
+}
+
+rule StockClerkUpdatesInventory2 {
+  description: "Stock clerks can manage the inventory"
+  participant: "org.example.empty.InventoryClerk"
+  operation: ALL
+  resource: "org.example.empty.ifSold"
+  action: ALLOW
+}
+rule StockClerkUpdatesInventory3 {
+  description: "Stock clerks can manage the inventory"
+  participant: "org.example.empty.InventoryClerk"
+  operation: ALL
+  resource: "org.hyperledger.composer.system.**"
+  action: ALLOW
+}
+rule RetailersSeeStatus1 {
+  description: "Retailers can see inventory"
+  participant: "org.example.empty.Retailer"
+  operation: READ
+  resource: "org.example.empty.Consignment"
+  action: ALLOW
+}
+
+rule DistributorSeeUpdateThemselvesOnly {
+  description: "Distributor can see and update their own record only"
+  participant(t): "org.example.empty.Distributor"
+  operation: READ, UPDATE
+  resource(v): "org.example.empty.Distributor"
+  condition: (v.getIdentifier() == t.getIdentifier())
+  action: ALLOW
+}
+
+rule RetailerSeeUpdateThemselvesOnly {
+  description: "Retailer can see and update their own record only"
+  participant(t): "org.example.empty.Retailer"
+  operation: READ, UPDATE
+  resource(v): "org.example.empty.Retailer"
+  condition: (v.getIdentifier() == t.getIdentifier())
+  action: ALLOW
+}
+
+rule AuditorSeeUpdateThemselvesOnly {
+  description: "Auditor can see and update their own record only"
+  participant(t): "org.example.empty.Auditor"
+  operation: READ, UPDATE
+  resource(v): "org.example.empty.Auditor"
+  condition: (v.getIdentifier() == t.getIdentifier())
+  action: ALLOW
+}
+
+rule ClerkSeeUpdateThemselvesOnly {
+  description: "Clerk can see and update their own record only"
+  participant(t): "org.example.empty.InventoryClerk"
+  operation: READ, UPDATE
+  resource(v): "org.example.empty.InventoryClerk"
+  condition: (v.getIdentifier() == t.getIdentifier())
+  action: ALLOW
+}
+
+rule NetworkAdminUser {
+    description: "Grant business network administrators full access to user resources"
+    participant: "org.hyperledger.composer.system.NetworkAdmin"
+    operation: ALL
+    resource: "**"
+    action: ALLOW
+}
+
+rule NetworkAdminSystem {
+    description: "Grant business network administrators full access to system resources"
+    participant: "org.hyperledger.composer.system.NetworkAdmin"
+    operation: ALL
+    resource: "org.hyperledger.composer.system.**"
+    action: ALLOW
+}

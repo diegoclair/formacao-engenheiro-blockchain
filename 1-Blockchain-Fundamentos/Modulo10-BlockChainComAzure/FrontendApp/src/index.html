@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>Supply Chain Track App</h1>
+
+    <br> <label for="contractAddress">ID Contrato:</label> <input type="text" id="contractAddress" placeholder="Verificar ou criar um novo contrato"></input>
+    <br> <label for="locationId">ID Localidade:</label> <input type="text" id="locationId" placeholder="Digite o ID da localidade"></input>
+    <br> <label for="locationName">Nome Localidade:</label> <input type="text" id="locationName" placeholder="Nome da Localidade"></input>
+    <br> <label for="secret">Texto Secreto:</label> <input type="text" id="secret" placeholder="Digite o Texto Confidencial"></input>
+    <br> <label for="passPhrase">Passphrase:</label> <input type="text" id="passPhrase" placeholder="Insira ou digitalize a frase secreta"></input>
+
+    <br> <br>
+    <button id="createContract" onclick="App.createContract()">Criar novo contrato</button>
+    <br> <br>
+    <button id="addNewLocation" onclick="App.addNewLocation()">Adicionar novo local</button>
+    <br> <br>
+    <button id="getCurrentLocation" onclick="App.getCurrentLocation()">Obter o localidade atual</button>
+
+</body>
+</html>
